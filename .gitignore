@@ -1,14 +1,18 @@
-# Dependencies
+# node
 node_modules/
+npm-debug.log
 
-# Environment variables (NEVER push these to GitHub)
+# env
 .env
 .env.local
 
-# Production Build output
+# build
 dist/
 build/
+
+# logs
+logs
 *.log
 
-# Mac system files
+# mac
 .DS_Store
