@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={footerStyles.footer}>
         <div className={footerStyles.container}>
             <div className={footerStyles.copyright}>
-                &copy; {new Date().getFullYear()} InvoiceAI  Built by Khyati
+                &copy; {new Date().getFullYear()} BillNex.Ai  Built by Khyati
             </div>
 
             <div className={footerStyles.links}>

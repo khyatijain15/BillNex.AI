@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 const StatusIcons = {
   paid: ({ className = "w-3 h-3" }) => (
     <svg
@@ -59,76 +57,42 @@ const StatusBadge = ({status=" ",size="default",showIcon=true}) => {
 
    const statusConfig = {
     paid: {
-      bg: "bg-emerald-50/80 backdrop-blur-sm",
-      text: "text-emerald-700",
-      border: "border-emerald-200",
-      icon: "paid",
-      gradient: "from-emerald-400 to-green-500",
+      bg: "bg-[var(--color-paid-bg)]",
+      text: "text-[var(--color-paid)]",
+      border: "border-[rgba(74,122,90,0.15)]",
     },
     unpaid: {
-      bg: "bg-amber-50/80 backdrop-blur-sm",
-      text: "text-amber-700",
-      border: "border-amber-200",
-      icon: "unpaid",
-      gradient: "from-amber-400 to-orange-500",
+      bg: "bg-[var(--color-unpaid-bg)]",
+      text: "text-[var(--color-unpaid)]",
+      border: "border-[rgba(168,78,34,0.15)]",
     },
     overdue: {
-      bg: "bg-rose-50/80 backdrop-blur-sm",
-      text: "text-rose-700",
-      border: "border-rose-200",
-      icon: "overdue",
-      gradient: "from-rose-400 to-red-500",
+      bg: "bg-[var(--color-unpaid-bg)] opacity-90",
+      text: "text-[var(--color-unpaid)]",
+      border: "border-[rgba(168,78,34,0.15)]",
     },
     draft: {
-      bg: "bg-gray-50/80 backdrop-blur-sm",
-      text: "text-gray-700",
-      border: "border-gray-200",
-      icon: "draft",
-      gradient: "from-gray-400 to-gray-500",
+      bg: "bg-[var(--color-bg-surface)]",
+      text: "text-[var(--color-ink-600)]",
+      border: "border-[var(--color-border)]",
     },
     default: {
-      bg: "bg-gray-50/80 backdrop-blur-sm",
-      text: "text-gray-700",
-      border: "border-gray-200",
-      icon: "draft",
-      gradient: "from-gray-400 to-gray-500",
+      bg: "bg-[var(--color-bg-surface)]",
+      text: "text-[var(--color-ink-600)]",
+      border: "border-[var(--color-border)]",
     },
   };
 
   const config=statusConfig[s] || statusConfig.default;
-  const IconComponent=StatusIcons[config.icon] || StatusIcons.draft;
-
-  const sizeClasses = {
-    small: "px-2 py-1 text-xs gap-1.5",
-    default: "px-3 py-1.5 text-sm gap-2",
-    large: "px-4 py-2 text-base gap-2.5",
-  };
 
   return (
     <div 
-    className={`inline-flex items-center ${sizeClasses[size]} rounded-full font-medium
-    ${config.bg} ${config.text} border ${config.border} transition-all duration-300
-    ease-out hover:scale-105 hover:shadow-sm group relative overflow-hidden`}
+    className={`inline-flex items-center rounded-[20px] font-[var(--font-body)] tracking-[0.07em] uppercase text-[9.5px] px-[9px] py-[3px] gap-1.5 ${config.bg} ${config.text} border ${config.border} transition-all duration-300 ease-out`}
     >
-        <div
-        className={`absolute inset-0 bg-liner-to-r ${config.gradient} opacity-0
-        group-hover:opacity-5 transition-opacity duration-300`}
-        ></div>
-
-        {showIcon && (
-            <IconComponent className="w-3 h-3"
-             />
-        )}
-
-        <span className="relative z-10 font-semibold tracking-wide first-letter:uppercase">
-         {s==="default" ? status:s}
+        <div className={`w-1.5 h-1.5 rounded-full bg-current`} />
+        <span className="relative z-10">
+            {s==="default" ? status:s}
         </span>
-        {(s==="unpaid" || s==="overdue") && (
-            <div className='relative z-10'>
-               <div className={`w-1.5 h-1.5 rounded-full bg-current animate-pulse`}
-                />
-            </div>
-        )}
     </div>
   )
 };

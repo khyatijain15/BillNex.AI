@@ -602,6 +602,7 @@ export default function InvoicesPage() {
       {/* Header */}
       <div className={invoicesStyles.headerContainer}>
         <div>
+          
           <h1 className={invoicesStyles.headerTitle}>Invoice Management</h1>
           <p className={invoicesStyles.headerSubtitle}>
             Search, filter, and manage your invoices with powerful AI tools

@@ -808,7 +808,7 @@ export default function CreateInvoice() {
 
   const totals = computeTotals(items, invoice?.taxPercent ?? 18);
 
-  /* ---------- JSX (kept structure, invoiceNumber input prefills generated value) ---------- */
+
   return (
     <div className={createInvoiceStyles.pageContainer}>
       {/* Header Section */}

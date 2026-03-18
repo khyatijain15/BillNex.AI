@@ -362,6 +362,7 @@ function handleLocalFilePick(kind, file) {
   return (
     <div className={businessProfileStyles.pageContainer}>
         <div className={businessProfileStyles.headerContainer}>
+            {/*<div style={{fontSize: '9.5px', letterSpacing: '0.24em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '4px'}}>Settings</div> */}
             <h1 className={businessProfileStyles.headerTitle}>Business Profile</h1>
             <p className={businessProfileStyles.headerSubtitle}>
                 Configure your company details,branding assets and invoice defaults

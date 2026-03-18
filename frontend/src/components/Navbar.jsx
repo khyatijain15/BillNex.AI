@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { navbarStyles } from '../assets/dummyStyles.js'
-import logo from '../assets/logo.png'
+import BillNexLogo from './BillNexLogo.jsx'
 
 import { Link, useNavigate } from "react-router-dom"
 import { SignedOut, useAuth, useClerk, useUser } from "@clerk/clerk-react"
@@ -138,8 +138,7 @@ const Navbar = () => {
             <nav className={navbarStyles.nav}>
                 <div className={navbarStyles.logoSection}>
                 <Link to='/' className={navbarStyles.logoLink}>
-                   <img src={logo} alt="logo" className={navbarStyles.logoImage} />
-                   <span className={navbarStyles.logoText}>InvoiceAI</span>
+                   <BillNexLogo />
                 </Link>
                 <div className={navbarStyles.desktopNav}>
                     <a href="#features" className={navbarStyles.navLink}>Features</a>

@@ -24,11 +24,9 @@ app.use(express.urlencoded({limit:"20mb",extended:true}));
 connectDB();
 
 //routes
-app.use('/uploads',express.static(path.join(process.cwd(),"uploads")));
 app.use('/api/invoice',invoiceRouter);
 app.use('/api/businessProfile',businessProfileRouter);
 app.use('/api/ai',aiInvoiceRouter)
-
 
 app.get('/',(req,res)=>{
      res.send("API working")

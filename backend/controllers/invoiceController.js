@@ -51,10 +51,8 @@ function uploadedFilesToUrls(req) {
   };
   Object.keys(mapping).forEach((field) => {
     const arr = req.files[field];
-    if (Array.isArray(arr) && arr[0]) {
-      const filename =
-        arr[0].filename || (arr[0].path && path.basename(arr[0].path));
-      if (filename) urls[mapping[field]] = `${API_BASE}/uploads/${filename}`;
+    if (Array.isArray(arr) && arr[0] && arr[0].path) {
+      urls[mapping[field]] = arr[0].path;
     }
   });
   return urls;

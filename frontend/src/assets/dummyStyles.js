@@ -21,14 +21,14 @@ export const businessProfileStyles = {
   
   // Header
   headerContainer: "text-center lg:text-left",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
   
   // Cards/Sections
   cardContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-8 border border-gray-200/60 shadow-sm",
   cardHeaderContainer: "flex items-center gap-3 mb-6",
   cardIconContainer: "p-2 rounded-lg",
-  cardTitle: "text-xl whitespace-nowrap font-semibold text-gray-900",
+  cardTitle: "text-[18px] font-[var(--font-display)] font-[400] whitespace-nowrap text-[var(--color-ink-900)]",
   
   // Grid
   gridCols1: "grid grid-cols-1 gap-6",
@@ -70,7 +70,7 @@ export const businessProfileStyles = {
   actionContainer: "bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm",
   actionInnerContainer: "flex flex-col sm:flex-row items-center justify-between gap-4",
   actionButtonGroup: "flex flex-wrap items-center gap-2 sm:gap-3 justify-center sm:justify-start",
-  saveButton:  "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm sm:text-base hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
+  saveButton:  "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl bg-[var(--color-ink-900)] text-white font-semibold text-sm sm:text-base hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
   resetButton:  "inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 md:px-7 md:py-3.5 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium text-sm sm:text-base",
   
   // Animation
@@ -125,7 +125,7 @@ export const createInvoiceStyles = {
   
   // Header
   headerContainer: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
   headerButtonContainer: "flex items-center gap-3",
   
@@ -143,7 +143,7 @@ cardHeaderLeft: "flex items-center gap-2 sm:gap-3",
 
 cardIconContainer: "p-2 rounded-lg w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center",
 
-cardTitle: "text-xl sm:text-2xl font-semibold text-gray-900",
+cardTitle: "text-[18px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)]",
 
 cardSubtitle: "text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4",
 
@@ -167,7 +167,7 @@ cardSubtitle: "text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4",
   
   // Buttons
   previewButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm",
-  saveButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
+  saveButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-ink-900)] text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed",
   saveProfileButton: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-50 text-blue-700 hover:bg-blue-100 transition-all duration-200 text-sm font-medium",
   addItemButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-dashed border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-700 transition-all duration-200 font-medium w-full justify-center group",
   
@@ -281,7 +281,7 @@ export const appShellStyles = {
   layout: "lg:flex",
   
   // Desktop Sidebar
-  sidebar: "hidden lg:block bg-white/80 backdrop-blur-xl border-r border-gray-200/60 transition-all duration-500 ease-in-out relative",
+  sidebar: "hidden lg:block bg-[var(--color-bg-paper)] backdrop-blur-xl border-r border-[var(--color-border)] transition-all duration-500 ease-in-out relative",
   sidebarCollapsed: "w-20",
   sidebarExpanded: "w-80",
   sidebarGradient: "absolute inset-0 bg-gradient-to-b from-blue-50/5 to-transparent pointer-events-none",
@@ -293,19 +293,19 @@ export const appShellStyles = {
   logoLink: "inline-flex items-center group transition-all duration-300",
   logoImage: "h-16 w-16 object-contain drop-shadow-sm",
   logoTextContainer: "",
-  logoText: "font-bold text-3xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  logoText: "font-bold text-3xl bg-[var(--color-ink-900)] bg-clip-text text-transparent",
   logoUnderline: "h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-500 mt-1",
   collapseButton: "p-2 ml-7 rounded-lg border border-gray-200 bg-white/50 hover:bg-white hover:shadow-md transition-all duration-300 group",
   
   // Navigation
   nav: "space-y-2",
-  sidebarLink: "group flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all duration-300 ease-out",
+  sidebarLink: "group flex items-center gap-3 px-3 py-3 rounded-md text-[var(--font-body)] text-sm font-medium transition-all duration-300 ease-out",
   sidebarLinkCollapsed: "justify-center",
-  sidebarLinkActive: "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 shadow-sm border border-blue-100",
-  sidebarLinkInactive: "text-gray-600 hover:text-gray-900 hover:bg-white hover:shadow-md",
+  sidebarLinkActive: "bg-[var(--color-accent-bg)] text-[var(--color-accent)] shadow-sm border border-[var(--color-accent-border)]",
+  sidebarLinkInactive: "text-[var(--color-ink-600)] hover:bg-[var(--color-bg-surface)] hover:text-[var(--color-ink-900)]",
   sidebarIcon: "transition-all duration-300",
-  sidebarIconActive: "text-blue-600 scale-110",
-  sidebarIconInactive: "text-gray-400 group-hover:text-gray-600 group-hover:scale-105",
+  sidebarIconActive: "text-[var(--color-accent)] scale-110",
+  sidebarIconInactive: "text-[var(--color-ink-600)] group-hover:text-[var(--color-ink-900)] group-hover:scale-105",
   sidebarText: "flex-1 transition-all duration-300",
   sidebarActiveIndicator: "w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse",
   
@@ -323,17 +323,17 @@ export const appShellStyles = {
   // Mobile Sidebar
   mobileOverlay: "lg:hidden fixed inset-0 z-50",
   mobileBackdrop: "absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300",
-  mobileSidebar: "absolute inset-y-0 left-0 w-80 bg-white/90 backdrop-blur-xl border-r border-gray-200/60 p-6 overflow-auto transform transition-transform duration-300",
+  mobileSidebar: "absolute inset-y-0 left-0 w-80 bg-[var(--color-bg-paper)] backdrop-blur-xl border-r border-[var(--color-border)] p-6 overflow-auto transform transition-transform duration-300",
   mobileHeader: "mb-8 flex items-center justify-between",
   mobileLogoLink: "inline-flex items-center",
   mobileLogoImage: "h-10 w-10 object-contain",
-  mobileLogoText: "font-bold text-xl ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  mobileLogoText: "font-bold text-xl ml-3 bg-[var(--color-ink-900)] bg-clip-text text-transparent",
   mobileCloseButton: "p-2 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-white transition-all duration-300",
   mobileCloseIcon: "w-5 h-5 text-gray-600",
   mobileNav: "space-y-2",
-  mobileNavLink: "flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium transition-all duration-300",
-  mobileNavLinkActive: "bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 border border-blue-100",
-  mobileNavLinkInactive: "text-gray-600 hover:text-gray-900 hover:bg-white hover:shadow-sm",
+  mobileNavLink: "flex items-center gap-3 px-3 py-3 rounded-md text-[var(--font-body)] text-sm font-medium transition-all duration-300",
+  mobileNavLinkActive: "bg-[var(--color-accent-bg)] text-[var(--color-accent)] border border-[var(--color-accent-border)]",
+  mobileNavLinkInactive: "text-[var(--color-ink-600)] hover:bg-[var(--color-bg-surface)] hover:text-[var(--color-ink-900)]",
   mobileLogoutSection: "mt-8 border-t border-gray-200/60 pt-6",
   mobileLogoutButton: "w-full flex items-center gap-3 px-3 py-3 rounded-xl text-sm font-medium text-red-600 hover:bg-red-50 transition-all duration-300",
   
@@ -347,15 +347,15 @@ export const appShellStyles = {
   mobileMenuIcon: "w-5 h-5 text-gray-700",
   desktopCollapseButton: "hidden lg:flex items-center justify-center p-2 rounded-xl border border-gray-200 bg-white/50 hover:bg-white hover:shadow-md transition-all duration-300",
   welcomeContainer: "flex flex-col",
-  welcomeTitle: "text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 tracking-tight",
-  welcomeName: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  welcomeTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
+  welcomeName: "text-[var(--color-accent)] font-[400]",
   welcomeSubtitle: "text-xs sm:text-sm text-gray-600 mt-0.5 sm:mt-1",
   mobileUserAvatar: "lg:hidden flex items-center gap-2",
-  mobileAvatar: "w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xs font-semibold shadow-lg",
+  mobileAvatar: "w-8 h-8 rounded-full bg-[var(--color-accent-bg)] border border-[var(--color-accent-border)] flex items-center justify-center text-[var(--color-accent)] font-[var(--font-display)] text-xs font-semibold shadow-lg",
   
   // Header Actions
   headerActions: "flex items-center justify-between sm:justify-end gap-3 sm:gap-4 pb-3 sm:pb-0 border-t border-gray-100 sm:border-t-0 pt-3 sm:pt-0",
-  ctaButton: "group inline-flex  items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 text-sm sm:text-base flex-1 sm:flex-none justify-center",
+  ctaButton: "group inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-[7px] bg-[var(--color-ink-900)] text-[var(--color-bg-paper)] font-[var(--font-body)] text-[11px] uppercase tracking-[0.1em] shadow-lg hover:bg-[var(--color-ink-600)] transition-all duration-300 transform hover:scale-105 flex-1 sm:flex-none justify-center",
   ctaIcon: "w-4 h-4 text-white",
   ctaArrow: "w-0 group-hover:w-2 group-hover:ml-1 transition-all duration-300 overflow-hidden hidden sm:block",
   userSectionDesktop: " lg:flex md:flex items-center gap-4 pl-4 border-l border-gray-200/60",
@@ -363,8 +363,8 @@ export const appShellStyles = {
   userName: "text-sm font-medium text-gray-900",
   userEmail: "text-xs text-gray-500",
   userAvatarContainer: "relative ",
-  userAvatar: "w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer group",
-  userAvatarBorder: "absolute inset-0 rounded-2xl border-2 border-white/20 group-hover:border-white/40 transition-all duration-300",
+  userAvatar: "w-12 h-12 rounded-full bg-[var(--color-accent-bg)] border border-[var(--color-accent-border)] flex items-center justify-center text-[var(--color-accent)] font-[var(--font-display)] text-lg transform hover:scale-105 transition-all duration-300 cursor-pointer group",
+  userAvatarBorder: "hidden",
   userStatus: "absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white shadow-sm",
   
   // Main Content
@@ -380,7 +380,7 @@ export const dashboardStyles = {
   
   // Header
   headerContainer: "text-center lg:text-left",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0",
   
   // KPI Grid
@@ -396,21 +396,21 @@ export const dashboardStyles = {
   cardContainerOverflow: "bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden",
   
   // Quick Stats Card
-  quickStatsCard: "bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white",
-  quickStatsTitle: "font-semibold text-lg mb-4",
+  quickStatsCard: "bg-[var(--color-ink-900)] rounded-2xl p-6 text-white",
+  quickStatsTitle: "font-[var(--font-display)] font-[400] text-[18px] text-[var(--color-bg-paper)] mb-4",
   quickStatsRow: "flex justify-between items-center",
-  quickStatsLabel: "text-blue-100",
-  quickStatsValue: "font-semibold",
+  quickStatsLabel: "text-white/70 text-sm font-[var(--font-body)]",
+  quickStatsValue: "font-semibold text-white",
   
   // Quick Actions
   quickActionsContainer: "space-y-3",
-  quickActionButton: "w-full flex items-center gap-3 p-3 rounded-xl transition-all duration-200 group",
+  quickActionButton: "w-full flex items-center gap-3 p-3 rounded-[7px] text-[11px] uppercase tracking-[0.1em] transition-all duration-200 group font-[var(--font-body)]",
   quickActionIconContainer: "p-2 rounded-lg group-hover:scale-110 transition-transform",
   quickActionText: "font-medium",
   
   // Quick Action Color Variants
-  quickActionBlue: "bg-blue-50 text-blue-700 hover:bg-blue-100",
-  quickActionGray: "bg-gray-50 text-gray-700 hover:bg-gray-100",
+  quickActionBlue: "bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-light)]",
+  quickActionGray: "bg-transparent border border-[var(--color-border-mid)] text-[var(--color-ink-600)] hover:bg-[var(--color-bg-surface)]",
   
   // Table Styles
   tableHeader: "px-6 py-5 border-b border-gray-200/60",
@@ -464,11 +464,11 @@ export const invoicesStyles = {
   
   // Header
   headerContainer: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-600 max-w-3xl",
   headerActions: "flex items-center gap-3",
-  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium shadow-sm group",
-  createButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg",
+  aiButton: "inline-flex items-center gap-2 px-6 py-3 rounded-[7px] border border-[var(--color-border-mid)] bg-transparent text-[var(--color-ink-600)] hover:bg-[var(--color-bg-surface)] transition-all duration-200 font-medium shadow-sm group",
+  createButton: "inline-flex items-center gap-2 px-6 py-3 rounded-[7px] bg-[var(--color-ink-900)] text-white hover:bg-[var(--color-ink-600)] transform hover:scale-105 transition-all duration-200 shadow-lg text-[11px] uppercase tracking-[0.1em] font-[var(--font-body)]",
   
   // Stats Overview
   statsGrid: "grid grid-cols-2 md:grid-cols-4 gap-6",
@@ -519,23 +519,23 @@ export const invoicesStyles = {
   // Table
   tableContainer: "overflow-x-auto",
   table: "w-full",
-  tableHead: "bg-gray-50/80 border-b border-gray-200/60",
-  tableHeaderCell: "cursor-pointer px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider hover:bg-gray-100/50 transition-colors duration-150",
-  tableHeaderCellRight: "px-6 py-4 text-right text-xs font-semibold text-gray-500 uppercase tracking-wider",
+  tableHead: "bg-[var(--color-bg-base)] border-b border-[var(--color-border)]",
+  tableHeaderCell: "cursor-pointer px-6 py-4 text-left font-[400] text-[9.5px] text-[var(--color-ink-200)] uppercase tracking-[0.18em]",
+  tableHeaderCellRight: "px-6 py-4 text-right font-[400] text-[9.5px] text-[var(--color-ink-200)] uppercase tracking-[0.18em]",
   tableHeaderContent: "flex items-center gap-2",
-  tableBody: "divide-y divide-gray-200/60",
-  tableRow: "hover:bg-gray-50/50 transition-colors duration-150 group",
+  tableBody: "divide-y divide-[var(--color-border)]",
+  tableRow: "hover:bg-[rgba(181,98,42,0.03)] border-b border-[var(--color-border)] transition-colors duration-150 group",
   
   // Client Cell
   clientCell: "px-6 py-4",
   clientContainer: "flex items-center gap-4",
-  clientAvatar: "w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-blue-600 font-medium group-hover:scale-110 transition-transform duration-200",
-  clientInfo: "font-medium text-gray-900 group-hover:text-blue-600 transition-colors",
-  clientId: "text-sm text-gray-500 mt-1",
-  clientEmail: "text-xs text-gray-400 mt-1 hidden md:block",
+  clientAvatar: "w-12 h-12 rounded-full bg-[var(--color-accent-bg)] border border-[var(--color-accent-border)] flex items-center justify-center text-[var(--color-accent)] font-medium transition-transform duration-200",
+  clientInfo: "font-medium text-[var(--color-ink-900)] transition-colors",
+  clientId: "text-sm text-[var(--color-ink-400)] mt-1",
+  clientEmail: "text-xs text-[var(--color-ink-600)] mt-1 hidden md:block",
   
   // Amount Cell
-  amountCell: "px-6 py-4 font-medium text-gray-900",
+  amountCell: "px-6 py-4 font-[var(--font-display)] text-[15px] text-[var(--color-ink-900)]",
   
   // Status Cell
   statusCell: "px-6 py-4",
@@ -569,7 +569,7 @@ export const invoicesStyles = {
   paginationButton: "flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200",
   paginationNumbers: "flex items-center gap-1",
   paginationNumber: "w-10 h-10 rounded-xl text-sm font-medium transition-all duration-200",
-  paginationNumberActive: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg",
+  paginationNumberActive: "bg-[var(--color-ink-900)] text-white shadow-lg",
   paginationNumberInactive: "text-gray-600 hover:bg-gray-100"
 };
 
@@ -657,7 +657,7 @@ export const heroStyles = {
   
   // CTA Buttons
   ctaContainer: "flex flex-col sm:flex-row sm:items-center gap-4 lg:gap-6",
-  primaryButton: "group relative inline-flex items-center justify-center gap-3 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
+  primaryButton: "group relative inline-flex items-center justify-center gap-3 px-8 lg:px-10 py-4 lg:py-5 rounded-2xl bg-[var(--color-ink-900)] text-white font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
   primaryButtonOverlay: "absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
   primaryButtonText: "relative",
   primaryButtonIcon: "w-5 h-5 relative group-hover:translate-x-1 transition-transform duration-300",
@@ -714,7 +714,7 @@ export const heroStyles = {
     "flex justify-between text-lg sm:text-xl font-bold pt-3 border-t border-gray-200/60",
   totalLabel: "text-gray-900",
   totalValue:
-    "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent text-lg sm:text-xl font-bold",
+    "bg-[var(--color-ink-900)] bg-clip-text text-transparent text-lg sm:text-xl font-bold",
 
   // Action Buttons
   actionButtons: "flex flex-col sm:flex-row gap-3 pt-6",
@@ -723,7 +723,7 @@ export const heroStyles = {
   previewButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
   sendButton:
-    "flex-1 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 group/btn text-sm sm:text-base",
+    "flex-1 px-4 py-3 rounded-xl bg-[var(--color-ink-900)] text-white font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 group/btn text-sm sm:text-base",
   sendButtonText:
     "group-hover/btn:translate-x-1 transition-transform duration-200 inline-block",
 
@@ -762,13 +762,13 @@ export const invoicePreviewStyles = {
 
   // Header Actions
   headerContainer: "flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6",
-  headerTitle: "text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight",
+  headerTitle: "text-[32px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   headerSubtitle: "mt-2 text-lg text-gray-600",
   headerInvoiceNumber: "font-semibold text-blue-600",
   headerActions: "flex flex-wrap items-center gap-3",
   sendReminderButton: "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium",
   editInvoiceButton: "inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 font-medium",
-  printButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg",
+  printButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-ink-900)] text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-lg",
 
   // Invoice Preview Card
   printArea: "print-preview-container",
@@ -849,7 +849,7 @@ export const invoicePreviewStyles = {
   emptyStateIcon: "w-8 h-8",
   emptyStateTitle: "text-xl font-semibold text-gray-900",
   emptyStateMessage: "text-gray-600 mt-2 max-w-md mx-auto",
-  emptyStateButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
+  emptyStateButton: "inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-ink-900)] text-white font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 shadow-lg"
 };
 // src/assets/dummyStyles.js (add these to the existing export)
 export const pricingStyles = {
@@ -870,13 +870,13 @@ export const pricingStyles = {
   badgeDot: "w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse",
   badgeText: "text-sm font-medium text-blue-700",
   title: "text-2xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-gray-900 tracking-tight mb-6",
-  titleGradient: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent",
+  titleGradient: "bg-[var(--color-ink-900)] bg-clip-text text-transparent",
   description: "text-md md:text-xl lg:text-xl xl:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8",
   
   // Billing Toggle
   billingToggle: "inline-flex items-center bg-white/80 backdrop-blur-sm rounded-2xl p-2 border border-gray-200/60 shadow-sm",
   billingButton: "px-6 py-3 rounded-xl font-semibold transition-all duration-300",
-  billingButtonActive: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg",
+  billingButtonActive: "bg-[var(--color-ink-900)] text-white shadow-lg",
   billingButtonInactive: "text-gray-600 hover:text-gray-900",
   billingBadge: "ml-2 text-sm line-clamp-2 md:line-clamp-0 lg:line-clamp-0 xl:line-clamp-0 bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full",
   
@@ -942,7 +942,7 @@ export const pricingCardStyles = {
   
   // CTA Button
   ctaButton: "w-full py-4 px-6 rounded-3xl font-semibold transition-all cursor-pointer duration-300 group/btn",
-  ctaButtonPopular: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transform ",
+  ctaButtonPopular: "bg-[var(--color-ink-900)] text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-indigo-700 transform ",
   ctaButtonRegular: "bg-white border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50",
   ctaButtonText: "inline-block transition-transform duration-300",
   ctaButtonTextPopular: "group-hover/btn:translate-x-1",
@@ -1012,7 +1012,7 @@ export const navbarStyles = {
   // Desktop Auth Buttons
   authSection: "hidden md:flex items-center gap-4",
   signInButton: "text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200 px-4 py-2 rounded-2xl hover:bg-gray-50/80 backdrop-blur-sm",
-  signUpButton: "group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
+  signUpButton: "group relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-[var(--color-ink-900)] text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-indigo-700 overflow-hidden",
   signUpOverlay: "absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
   signUpText: "relative",
   signUpIcon: "w-4 h-4 relative group-hover:translate-x-1 transition-transform duration-300",
@@ -1043,34 +1043,34 @@ export const navbarStyles = {
 
 export const kpiCardStyles = {
   // Card Container
-  cardContainer: "group relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 border border-gray-200/60 shadow-sm hover:shadow-xl transition-all duration-500 ease-out hover:scale-[1.02] hover:border-gray-300/60 overflow-hidden",
-  
+  cardContainer: "group relative bg-[var(--color-bg-paper)] rounded-[10px] p-6 border border-[var(--color-border)] transition-all duration-500 overflow-hidden",
+
   // Background Effects
-  animatedBackground: "absolute inset-0 bg-gradient-to-br from-blue-50/0 via-indigo-50/0 to-purple-50/0 group-hover:from-blue-50/30 group-hover:via-indigo-50/20 group-hover:to-purple-50/10 transition-all duration-500 ease-out",
-  cornerAccent: "absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-blue-500/5 to-transparent rounded-bl-2xl",
-  
+  animatedBackground: "hidden",
+  cornerAccent: "hidden",
+
   // Content
   content: "relative z-10",
   headerContainer: "flex items-center justify-between",
   mainContent: "flex-1 min-w-0",
   iconTrendContainer: "flex items-center gap-3 mb-3",
-  
+
   // Icon
   iconContainer: "p-3 rounded-xl bg-gradient-to-br shadow-lg group-hover:scale-110 transition-transform duration-300",
   icon: "w-5 h-5 text-white",
-  
+
   // Trend Badge
-  trendBadge: "inline-flex items-center gap-1 px-2 py-1 rounded-full border text-xs font-medium",
-  trendBadgePositive: "text-emerald-600 bg-emerald-50 border-emerald-200",
-  trendBadgeNegative: "text-rose-600 bg-rose-50 border-rose-200",
-  trendBadgeNeutral: "text-gray-600 bg-gray-50 border-gray-200",
+  trendBadge: "inline-flex items-center gap-1 px-2 py-1 rounded-[20px] border text-[9.5px] uppercase tracking-[0.07em]",
+  trendBadgePositive: "text-[var(--color-paid)] bg-[var(--color-paid-bg)] border-[rgba(74,122,90,0.15)]",
+  trendBadgeNegative: "text-[var(--color-unpaid)] bg-[var(--color-unpaid-bg)] border-[rgba(168,78,34,0.15)]",
+  trendBadgeNeutral: "text-[var(--color-ink-600)] bg-[var(--color-bg-surface)] border-[var(--color-border)]",
   trendIcon: "w-3 h-3",
   trendIconNegative: "rotate-180",
-  
+
   // Text Content
   textContent: "space-y-2",
-  title: "text-sm font-medium text-gray-600 tracking-wide uppercase",
-  value: "text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight",
+  title: "text-[9.5px] font-[var(--font-body)] uppercase tracking-[0.18em] text-[var(--color-ink-400)]",
+  value: "text-[27px] font-[var(--font-display)] font-[400] text-[var(--color-ink-900)] tracking-tight",
   
   // Hint
   hint: "text-xs text-gray-500 font-medium flex items-center gap-1",

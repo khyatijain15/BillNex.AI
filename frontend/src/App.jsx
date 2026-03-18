@@ -47,7 +47,6 @@ const App = () => {
 
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="invoices" element={<Invoices/>} />
-          <Route path="invoices" element={<CreateInvoice/>} />
           <Route path="invoices/:id" element={<InvoicePreview />}/>
           <Route path="invoices/:id/preview" element={<InvoicePreview/>}/>
           <Route path="invoices/:id/edit" element={<CreateInvoice/>}/>
@@ -56,7 +55,7 @@ const App = () => {
           <Route path="business" element={<BusinessProfile/>}/>
 
         </Route>
-        <Route path="" element={<Notfound/>}/>
+        <Route path="*" element={<Notfound/>}/>
 
       </Routes>
 

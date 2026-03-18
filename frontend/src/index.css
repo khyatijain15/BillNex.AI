@@ -1,4 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 @import "tailwindcss";
+
+:root {
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+
+  /* Backgrounds */
+  --color-bg-base:       #F7F3ED;
+  --color-bg-paper:      #FAF8F4;
+  --color-bg-surface:    #EDE8DF;
+
+  /* Ink (text & borders) */
+  --color-ink-900:       #1C1A17;
+  --color-ink-600:       #4A4540;
+  --color-ink-400:       #9A9188;
+  --color-ink-200:       #C8C2B8;
+
+  /* Borders */
+  --color-border:        rgba(28,26,23,0.10);
+  --color-border-mid:    rgba(28,26,23,0.16);
+
+  /* Accent — Copper */
+  --color-accent:        #B5622A;
+  --color-accent-light:  #D4854D;
+  --color-accent-bg:     #FBF0E8;
+  --color-accent-border: rgba(181,98,42,0.18);
+
+  /* Semantic */
+  --color-paid:          #4A7A5A;
+  --color-paid-bg:       #EBF4EE;
+  --color-unpaid:        #A84E22;
+  --color-unpaid-bg:     #FBF0E8;
+
+  /* Typography scale */
+  --text-eyebrow:        9.5px;
+  --tracking-eyebrow:    0.22em;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-base);
+  color: var(--color-ink-900);
+}
 
 /* Add to your global CSS file */
 /* Mobile Responsiveness */
@@ -395,4 +439,40 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+@layer base {
+  input, textarea, select {
+    background-color: var(--color-bg-paper) !important;
+    border: 1px solid var(--color-border-mid) !important;
+    color: var(--color-ink-900) !important;
+    border-radius: 6px;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--color-bg-base), 0 0 0 4px var(--color-accent) !important;
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--color-ink-200) !important;
+  }
+  label {
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    color: var(--color-ink-400) !important;
+    font-family: var(--font-body) !important;
+  }
+
+  /* Buttons */
+  button[type="submit"], .bg-indigo-600, .bg-blue-600 {
+    background-color: var(--color-ink-900) !important;
+    color: var(--color-bg-paper) !important;
+    border-radius: 7px !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    border: none !important;
+  }
+  button[type="submit"]:hover, .bg-indigo-600:hover, .bg-blue-600:hover {
+    background-color: var(--color-ink-600) !important;
+  }
 }

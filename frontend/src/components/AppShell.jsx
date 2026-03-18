@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Outlet, Link, NavLink, useNavigate } from "react-router-dom";
 import { useClerk, useUser } from "@clerk/clerk-react";
 import { appShellStyles } from "../assets/dummyStyles.js";
-import logo from "../assets/logo.png";
+import BillNexLogo from "./BillNexLogo.jsx";
 
 const AppShell = () => {
   const navigate = useNavigate();
@@ -217,10 +217,7 @@ const displayName = (() => {
               }`}
             >
               <Link to="/" className={appShellStyles.logoLink}>
-                <img src={logo} alt="logo" className={appShellStyles.logoImage}/>
-                {!collapsed && (
-                  <span className={appShellStyles.logoText}>InvoiceAI</span>
-                )}
+                <BillNexLogo iconSize={36} showText={!collapsed} />
               </Link>
             </div>
 
@@ -281,11 +278,7 @@ const displayName = (() => {
             <div className={appShellStyles.mobileHeader}>
                <Link to='/' className={appShellStyles.mobileLogoLink}
                onClick={()=>setMobileOpen(false)}>
-                <img src={logo} alt="logo" className={appShellStyles.mobileLogoImage} />
-                <span className={appShellStyles.mobileLogoText}>
-                   InvoiceAI
-                </span>
-               
+                <BillNexLogo iconSize={36} showText={true} />
                </Link>
 
                <button onClick={()=>setMobileOpen(false)}

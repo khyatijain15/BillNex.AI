@@ -12,9 +12,9 @@ function uploadedFilesToUrls(req) {
   const stampArr = req.files.stampName || req.files.stamp || [];
   const sigArr = req.files.signatureNameMeta || req.files.signature || [];
 
-  if (logoArr[0]) urls.logoUrl = `${API_BASE}/uploads/${logoArr[0].filename}`;
-  if (stampArr[0]) urls.stampUrl = `${API_BASE}/uploads/${stampArr[0].filename}`;
-  if (sigArr[0]) urls.signatureUrl = `${API_BASE}/uploads/${sigArr[0].filename}`;
+  if (logoArr[0]) urls.logoUrl = logoArr[0].path;
+  if (stampArr[0]) urls.stampUrl = stampArr[0].path;
+  if (sigArr[0]) urls.signatureUrl = sigArr[0].path;
 
   return urls;
 }
