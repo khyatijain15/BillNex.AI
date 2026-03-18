@@ -3,7 +3,7 @@ import Invoice from "../models/invoiceModel.js";
 import {getAuth} from "@clerk/express";
 import path from 'path';
 
-const API_BASE='http://localhost:4000';
+const API_BASE = process.env.SERVER_URL || `http://localhost:${process.env.PORT || 4000}`;
 
 //to compute subtotal,tax and total
 function computeTotals(items=[],taxPercent=0){

@@ -5,7 +5,10 @@ import { useAuth } from '@clerk/clerk-react';
 import KpiCard from '../components/KpiCard.jsx';
 import StatusBadge from '../components/StatusBadge.jsx';
 
-const API_BASE= 'http://localhost:4000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+if (!import.meta.env.VITE_API_BASE_URL) {
+  console.warn("VITE_API_BASE_URL is not defined in environment variables.");
+}
 
 /* normalize client object */
 function normalizeClient(raw) {

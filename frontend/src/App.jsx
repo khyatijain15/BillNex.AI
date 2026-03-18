@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 
 import AppShell from "./components/AppShell";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import CreateInvoice from "./pages/CreateInvoice";
@@ -28,9 +29,10 @@ const ClerkProtected = ({ children }) => (
 
 const App = () => {
   return (
-    <div className="min-h-screen max-w-full overflow-x-hidden">
+    <ErrorBoundary>
+      <div className="min-h-screen max-w-full overflow-x-hidden">
 
-      <Routes>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route
           path="/app"
@@ -58,7 +60,8 @@ const App = () => {
 
       </Routes>
 
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 };
 
