@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pricingStyles,pricingCardStyles } from '../assets/dummyStyles.js';
-import { SignedIn, SignedOut, useAuth, useClerk } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, useAuth, useClerk } from '@clerk/react';
 import { useNavigate } from 'react-router-dom';
 
 const PricingCard=({

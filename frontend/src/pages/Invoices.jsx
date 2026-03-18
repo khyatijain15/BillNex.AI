@@ -4,7 +4,7 @@ import AiInvoiceModal from "../components/AiInvoiceModal";
 import GeminiIcon from "../components/GeminiIcon";
 import { useNavigate } from "react-router-dom";
 import { invoicesStyles } from "../assets/dummyStyles";
-import { useAuth } from "@clerk/clerk-react";
+import { useAuth } from "@clerk/react";
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
 if (!import.meta.env.VITE_API_BASE_URL) {

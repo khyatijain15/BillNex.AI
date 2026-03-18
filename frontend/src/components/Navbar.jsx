@@ -3,7 +3,7 @@ import { navbarStyles } from '../assets/dummyStyles.js'
 import BillNexLogo from './BillNexLogo.jsx'
 
 import { Link, useNavigate } from "react-router-dom"
-import { SignedOut, useAuth, useClerk, useUser } from "@clerk/clerk-react"
+import { SignedOut, useAuth, useClerk, useUser } from "@clerk/react"
 
 
 const Navbar = () => {

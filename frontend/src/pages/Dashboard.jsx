@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState,useMemo } from 'react'
 import { dashboardStyles } from '../assets/dummyStyles.js'
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@clerk/clerk-react';
+import { useAuth } from '@clerk/react';
 import KpiCard from '../components/KpiCard.jsx';
 import StatusBadge from '../components/StatusBadge.jsx';
 

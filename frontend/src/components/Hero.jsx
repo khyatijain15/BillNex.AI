@@ -1,7 +1,7 @@
 import React from 'react'
 import { heroStyles } from '../assets/dummyStyles.js';
 import { useNavigate } from 'react-router-dom';
-import { useClerk,SignedIn, SignedOut } from '@clerk/clerk-react';
+import { useClerk,SignedIn, SignedOut } from '@clerk/react';
 
 const Hero = () => {
 
