@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect, useCallback } from "react";
 import StatusBadge from "../components/StatusBadge";
-import AiInvoiceModal from "../components/AiInvoiceModal";
+import AiInvoiceModal from "../components/AIInvoiceModal";
 import GeminiIcon from "../components/GeminiIcon";
 import { useNavigate } from "react-router-dom";
 import { invoicesStyles } from "../assets/dummyStyles";
