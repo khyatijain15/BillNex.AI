@@ -1,12 +1,13 @@
 import React from 'react'
 import { heroStyles } from '../assets/dummyStyles.js';
 import { useNavigate } from 'react-router-dom';
-import { useClerk,SignedIn, SignedOut } from '@clerk/react';
+import { useClerk, useAuth } from '@clerk/react';
 
 const Hero = () => {
 
     const navigate=useNavigate();
     const clerk=useClerk();
+    const { isSignedIn } = useAuth();
 
     const handleSignInPrimary=()=>{
       navigate("/app/create-invoice");
@@ -60,7 +61,7 @@ const Hero = () => {
 
                 {/* CTA Buttons */}
                 <div className={heroStyles.ctaContainer}>
-                    <SignedIn>
+                    {isSignedIn && (
                         <button type='button'
                         onClick={handleSignInPrimary}
                         className={heroStyles.primaryButton}
@@ -79,9 +80,9 @@ const Hero = () => {
                               <path d="M5 12h14m-7-7l7 7-7 7" />
                              </svg>
                         </button>
-                    </SignedIn>
+                    )}
 
-                    <SignedOut>
+                    {!isSignedIn && (
                         <button
                         type='button'
                         onClick={handleSignOutPrimary}
@@ -100,7 +101,7 @@ const Hero = () => {
                               <path d="M5 12h14m-7-7l7 7-7 7" />
                              </svg>
                         </button>
-                    </SignedOut>
+                    )}
 
                     <a href="#features" className={heroStyles.secondaryButton}>
                         <span>Explore Features</span>

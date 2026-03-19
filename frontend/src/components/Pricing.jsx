@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { pricingStyles,pricingCardStyles } from '../assets/dummyStyles.js';
-import { SignedIn, SignedOut, useAuth, useClerk } from '@clerk/react';
+import { useAuth, useClerk } from '@clerk/react';
 import { useNavigate } from 'react-router-dom';
 
 const PricingCard=({
@@ -14,7 +14,9 @@ const PricingCard=({
   delay = 0,
   onCtaClick,
 
-}) =>(
+}) =>{
+  const { isSignedIn } = useAuth();
+  return (
     <div className={`${pricingCardStyles.card} ${
         isPopular ? pricingCardStyles.cardPopular : pricingCardStyles.cardRegular
     }`} 
@@ -94,7 +96,7 @@ const PricingCard=({
 
       {/* CTA area: show different button/label depending on auth state */}
       <div style={{ marginTop: 12 }}>
-        <SignedIn>
+        {isSignedIn && (
           <button
             type="button"
             onClick={() =>
@@ -122,9 +124,9 @@ const PricingCard=({
               {isPopular ? "Get Started" : "Choose Plan"}
             </span>
           </button>
-        </SignedIn>
+        )}
 
-        <SignedOut>
+        {!isSignedIn && (
           <button
             type="button"
             onClick={() =>
@@ -143,7 +145,7 @@ const PricingCard=({
               Sign in to get started
             </span>
           </button>
-        </SignedOut>
+        )}
       </div>
     </div>
     {isPopular && (
@@ -153,8 +155,8 @@ const PricingCard=({
         </>
     )}
 </div>
-
-)
+  )
+}
 
 const Pricing = () => {
 

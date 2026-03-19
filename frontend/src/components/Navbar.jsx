@@ -3,7 +3,7 @@ import { navbarStyles } from '../assets/dummyStyles.js'
 import BillNexLogo from './BillNexLogo.jsx'
 
 import { Link, useNavigate } from "react-router-dom"
-import { SignedOut, useAuth, useClerk, useUser } from "@clerk/react"
+import { useAuth, useClerk, useUser } from "@clerk/react"
 
 
 const Navbar = () => {
@@ -148,7 +148,8 @@ const Navbar = () => {
 
             <div className="flex items-center gap-4">
                 <div className={navbarStyles.authSection}>
-                    <SignedOut>
+                    {!isSignedIn && (
+                        <>
                         <button onClick={openSignIn} className={navbarStyles.signInButton} type='button'>Sign In</button>
                         <button onClick={openSignUp} className={navbarStyles.signUpButton} type='button'>
                             <div className={navbarStyles.signUpOverlay}></div>
@@ -163,7 +164,8 @@ const Navbar = () => {
   <path d="M5 12h14m-7-7l7 7-7 7" />
 </svg>
                         </button>
-                    </SignedOut>
+                        </>
+                    )}
                 </div>
 
                 {/* mobile toggle*/}
@@ -189,10 +191,12 @@ const Navbar = () => {
               <a href="#pricing" className={navbarStyles.mobileNavLink}>Pricing</a>
 
              <div className={navbarStyles.mobileAuthSection}>
-                <SignedOut>
+                {!isSignedIn && (
+                    <>
                     <button onClick={openSignIn} className={navbarStyles.mobileSignIn}>Sign In</button>
                     <button onClick={openSignUp} className={navbarStyles.mobileSignIn}>Get Started</button>
-                </SignedOut>
+                    </>
+                )}
                 </div>   
            </div>
         </div>

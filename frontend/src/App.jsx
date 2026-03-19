@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import AppShell from "./components/AppShell";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/react";
+import { useAuth, RedirectToSignIn } from "@clerk/react";
 import CreateInvoice from "./pages/CreateInvoice";
 import Invoices from "./pages/Invoices";
 import InvoicePreview from "./components/InvoicePreview";
@@ -15,17 +15,17 @@ import BusinessProfile from "./pages/BusinessProfile";
 import Notfound from "./pages/Notfound";
 
 
-const ClerkProtected = ({ children }) => (
-  
+const ClerkProtected = ({ children }) => {
+  const { isSignedIn, isLoaded } = useAuth();
+
+  if (!isLoaded) return null;
+
+  return (
     <>
-      <SignedIn>{children}</SignedIn>
-
-      <SignedOut>
-        <RedirectToSignIn />
-      </SignedOut>
+      {isSignedIn ? children : <RedirectToSignIn />}
     </>
-
-);
+  );
+};
 
 const App = () => {
   return (
